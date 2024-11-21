@@ -23,7 +23,7 @@ describe('Stock Controller Tests', () => {
 
       expect(response.status).toBe(201);
       expect(response.body.success).toBe(true);
-      expect(response.body.message).toBe('Product created successfully');
+      expect(response.body.message).toBe('Product created successfully.');
       expect(response.body.data).toEqual(mockProduct);
       expect(stockService.createProduct).toHaveBeenCalledTimes(1);
     });
@@ -56,7 +56,7 @@ describe('Stock Controller Tests', () => {
 
       expect(response.status).toBe(201);
       expect(response.body.success).toBe(true);
-      expect(response.body.message).toBe('Store created successfully');
+      expect(response.body.message).toBe('Store created successfully.');
       expect(response.body.data).toEqual(mockStore);
     });
 
@@ -89,7 +89,7 @@ describe('Stock Controller Tests', () => {
 
       expect(response.status).toBe(200);
       expect(response.body.success).toBe(true);
-      expect(response.body.message).toBe('Stock increased successfully');
+      expect(response.body.message).toBe('Stock increased successfully.');
       expect(response.body.data).toEqual(mockStock);
     });
 
@@ -100,7 +100,7 @@ describe('Stock Controller Tests', () => {
 
       expect(response.status).toBe(400);
       expect(response.body.success).toBe(false);
-      expect(response.body.message).toBe('Quantity must be a positive number');
+      expect(response.body.message).toBe('Quantity must be a positive number.');
     });
 
     it('should handle errors during stock increase', async () => {
@@ -133,7 +133,7 @@ describe('Stock Controller Tests', () => {
       expect(response.status).toBe(200);
       expect(response.body.success).toBe(true);
       expect(response.body.message).toBe(
-        'Stock decreased successfully using action: remove',
+        'Stock decreased successfully using action: remove.',
       );
       expect(response.body.data).toEqual(mockStock);
     });
@@ -169,7 +169,7 @@ describe('Stock Controller Tests', () => {
 
       expect(response.status).toBe(200);
       expect(response.body.success).toBe(true);
-      expect(response.body.message).toBe('Products fetched successfull');
+      expect(response.body.message).toBe('Products fetched successfully.');
       expect(response.body.data).toEqual(mockProducts);
     });
 
